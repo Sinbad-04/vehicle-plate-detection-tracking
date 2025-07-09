@@ -66,7 +66,8 @@ Argument	Description
 📊 Output Example
 The model detects license plates in real time and tracks them across frames using SORT. Below is a sample frame from the result video:
 
-<p align="center"> <img src="https://github.com/Sinbad-04/vehicle-plate-detection-tracking/blob/main/frame_sample.png" width="640"/> </p>
+![image](https://github.com/user-attachments/assets/0a117f0d-d8f8-4846-99ca-6431fbd3fa7c)
+
 ✅ You can find the full demo video in the repository: result.mp4
 
 🧠 How it Works
