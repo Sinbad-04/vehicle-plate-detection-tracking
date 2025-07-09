@@ -20,12 +20,19 @@ This project implements an end-to-end system to detect and track vehicle license
 vehicle-plate-detection-tracking/
 │
 ├── main.py                         # Main entry point
+
 ├── detect_license_plate.engine     # TensorRT engine for detection
-├── yolov8s.engine                  # Another custom engine (optional)
+
+├── yolov8s.engine                  # Another custom engine (optional
+
 ├── sort/                           # SORT tracking module
+
 ├── video_test.mp4                  # Input test video
+
 ├── video2.mp4                      # Optional input video
+
 ├── result.mp4                      # Output video with annotations
+
 └── README.md                       # This file
 🚀 Quick Start
 1️⃣ Clone repo
@@ -35,18 +42,21 @@ cd vehicle-plate-detection-tracking
 2️⃣ Setup environment
 Create virtual environment (recommended):
 
-bash
-
+````
 python -m venv venv
+````
 source venv/bin/activate      # Windows: venv\Scripts\activate
+````
 pip install -r requirements.txt
+````
 Dependencies include:
 torch, opencv-python, numpy, filterpy, tensorrt, ultralytics (if training YOLOv8)
 
 🎥 Running Inference
-bash
 
+````
 python main.py --video video_test.mp4 --engine detect_license_plate.engine --output result.mp4
+````
 ✅ Arguments
 Argument	Description
 --video	Path to input video file
@@ -79,10 +89,13 @@ Frame-by-frame: detect → track → draw boxes → write frame
 📈 Training (optional)
 If you want to train your own YOLOv8 model:
 
-bash
 
+````
 pip install ultralytics
+````
+````
 yolo task=detect mode=train model=yolov8s.pt data=your_dataset.yaml epochs=100 imgsz=640
+````
 Then convert to TensorRT engine if needed.
 
 💡 Future Improvements
